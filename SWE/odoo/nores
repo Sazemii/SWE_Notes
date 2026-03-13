@@ -1,0 +1,27 @@
+grep -r "_name = 'hr.payroll.structure.type'" --include="*.py" .
+grep -r "class HrPayrollStructureType" --include="*.py" .
+(5, 0, 0)
+(0, 0, {...})
+
+noupdate="1" means this record won't be overwritten if the module is updated later — only on first install.
+
+0 - new record
+1 - update any existing record by ID 
+2 - delete a record by ID   
+3 - unlink a record by ID 
+4 - link an existing record by ID 
+5 - unlink all (clear the list)
+6 - replace the entire list with given ids 
+
+
+# Find a button by its CSS class
+grep -rn "o_pricelist_button" ./odoo/addons/point_of_sale/
+
+# Find a button by its display text
+grep -rn "Pricelist" ./odoo/addons/point_of_sale/static/
+
+# Find by icon class
+grep -rn "fa-th-list" ./odoo/addons/point_of_sale/static/
+
+# Find a QWeb template by t-name
+grep -rn 't-name="point_of_sale.ControlButtons"' ./odoo/addons/
